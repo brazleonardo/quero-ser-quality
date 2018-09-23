@@ -10,7 +10,7 @@ Api desenvolvida em Laravel + Mysql.
 
 Arquivo de configuração encontra-se na raiz do diretório:
 
-**/todo-list-api**
+**/todo-list-api/**
 
 Configurei o banco com as infromações abaixo:
 
@@ -30,9 +30,9 @@ DB_PASSWORD=''
 
 Sobre o front-end.
 
-**/todo-list-api**
+**/todo-list-api/**
 
-comando para instalar as dependências:
+Comando para instalar as dependências:
 
 ```cmd
 npm install
