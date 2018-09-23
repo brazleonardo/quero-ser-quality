@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <title>Todo list Quality</title>
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/fonts.css">
+</head>
+    <body>
+
+        <main class="app">
+
+        	<header class="session header-in">
+        		<div class="container">
+					<h3 class="title"><span>Minhas Tarefas</span></h3>
+				</div>
+			</header>
+
+			<section class="session listagem">
+				<div class="container">
+					<div class="row"></div>
+				</div>
+			</section>
+
+            <section class="session nova-tarefa">
+            	<div class="container">
+            		<h3 class="subtitle text-center">Nova tarefa</h3>
+	            	<form class="form" method="post">
+	            		<div class="form-group msg"></div>
+	                	<div class="form-group">
+	            			<label for="titulo">Título</label>
+							<input type="text" name="titulo" id="titulo" class="form-field" placeholder="Informe um título">
+						</div>
+						<div class="form-group">
+							<label for="descricao">Descrição</label>
+							<textarea name="descricao" id="descricao" class="form-field" placeholder="Digite algo"></textarea>
+						</div>
+						<div class="form-group">
+							<button type="submit" class="button">Salvar</button>
+						</div>
+	            	</form>
+	            </div>
+            </section>
+
+            <aside class="menu">
+            	<div class="menu-in">
+					<a href="#" class="add-tarefa"><div><i class="far fa-address-card"></i><span>Adicionar</span></div></a>
+					<div class="separetor">Filtros</div>
+					<a href="#" class="all-tarefa"><div><i class="fas fa-reply-all"></i><span>Todos</span></div></a>
+					<a href="#" class="active-tarefa"><div><i class="fab fa-product-hunt"></i><span>Pendentes</span></div></a>
+					<a href="#" class="complete-tarefa"><div><i class="fas fa-copyright"></i><span>Concluído</span></div></a>
+            	</div>
+            </aside>
+        </main>
+        
+        <script src="assets/js/bundle.js"></script>
+
+    </body>
+</html>

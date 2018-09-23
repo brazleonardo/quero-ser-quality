@@ -1,0 +1,233 @@
+* { padding: 0; margin: 0; }
+
+*::before, *::after {
+    margin: 0;
+    padding: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    outline: medium none !important;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body{    
+    font-family: 'Open Sans', sans-serif;
+    overflow: hidden;
+    background-color: #eee;
+    color: #999;
+    font-size: 14px;
+} 
+
+ul { list-style: none; }
+
+button, label, .subtitle,
+a, a:hover, a:focus, a:active, a:visited, a:focus:active, a:active:focus { 
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    outline: none; 
+    text-decoration: none; 
+    border: 0; 
+    background-color: transparent;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.text-left { text-align: left; display: block; }
+.text-center { text-align: center; display: block; }
+.text-right { text-align: right; display: block; }
+
+.title { margin: 40px 0 20px; text-indent: 15px; font-weight: 300; font-size: 35px;  position: relative; }
+.title span { display: table; padding: 0 20px; background-color: #eee; margin: auto; position: relative; z-index: 1; }
+.title:before { 
+    width: calc(100% - 30px); 
+    height: 1px; 
+    content: "";
+    background-color: #d7b61d; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.subtitle { font-weight: 400; font-size: 16px; }
+
+.container { width: 100%; max-width: 1400px; margin: auto; padding: 0 15px; }
+
+.row { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.col {
+    padding: 15px;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    transition: all .6s ease-in-out;
+}
+
+.hide { display: none; }
+.hide-session { transform: translateY(10%); opacity: 0; }
+.remove-item .content { position: relative; }
+.remove-item .content .header,
+.remove-item .content .desc { filter: blur(1px); }
+.remove-item .content:before {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: block;
+    font-size: 14px;
+    line-height: 40px;
+    color: #d7b61d;
+    content: "Aguarde...";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.85);
+    z-index: 5;
+}
+
+.session { 
+    width: calc(100% - 80px);
+    height: calc(100% - 99px);
+    position: absolute; 
+    top: 0;
+    transition: all .4s ease;    
+}
+
+.header-in { height: 100px; }
+
+.form-group { margin-bottom: 10px; }
+.form-group label { color: #333; text-indent: 15px; display: block; margin-bottom: 3px; }
+.form-group .form-field { 
+    width: 100%;
+    padding: 5px 15px; 
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif; 
+    font-weight: 300; 
+    background-color: #eee;
+    border-radius: 5px;
+    border: 1.5px solid #666;
+}
+.form-group textarea.form-field { max-width: 100vw; }
+.button {
+    width: 100%;
+    height: 40px;
+    padding: 5px 15px;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif; 
+    font-weight: 700; 
+    border-radius: 5px;
+    border: 1.5px solid #333;
+    text-transform: uppercase;
+    transition: all .6s ease-in-out;
+}
+.button:hover { background-color: #d7b61d; border-color: #d7b61d; color: #333; font-size: 18px; }
+
+.form[disabled='disabled'] *[type='submit'],
+.form[disabled='disabled'] *[type='submit']:hover { background-color: #666; border-color: #666; color: #ddd; font-size: 14px; }
+
+.alert-error { color: #d7b61d; font-size: 300; }
+.alert-success { color: #4caf50; font-size: 300; }
+
+.listagem { top: 99px; }
+.listagem .col .content { width: 100%; height: 100%; border-radius: 5px; overflow: hidden; transition: all 0.4s ease-in-out; }
+.listagem .col .content header { height: 40px; display: flex; justify-content: space-between; align-items: center; background-color: #fefefe; padding: 0 5px; }
+.listagem .col .content header .subtitle { width: 100%; height: 100%; line-height: 40px; text-align: center; margin: 0; }
+.listagem .col .content header .remove { width: 20px; flex: 0 0 20px; transition: all .4s ease-in-out; }
+.listagem .col .content header .remove:hover { color: #d7b61d; font-size: 16px; }
+.listagem .col .content .desc { 
+    padding: 15px;
+    width: 100%;
+    height: 100%; 
+    max-height: 150px; 
+    overflow-y: auto; 
+    color: #333;
+    background-color: #dad9d9; 
+    display: none;
+}
+.listagem .col .content .desc span { display: block; }
+.listagem .col.show { flex-grow: 0; }
+.listagem .col.show .content .desc { display: block; }
+.listagem .col.show .content header .subtitle { font-weight: 700; }
+.listagem .col[data-status="1"] .content { opacity: 0.6; }
+.listagem .col[data-status="1"] .content header .subtitle,
+.listagem .col[data-status="1"] .content .desc span { text-decoration: line-through; }
+
+.menu {
+    width: 80px;
+    height: 100%;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 20;
+}
+.menu .menu-in {
+    width: 100%;
+    height: 100%;
+    padding: 20px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.menu .menu-in a { font-size: 40px; color: #d7b61d; display: flex; justify-content: center; margin-bottom: 20px; transition: all .4s ease-in-out; }
+.menu .menu-in a i { display: table; margin: auto auto 5px; }
+.menu .menu-in a span { display: block; font-size: 11px; color: #ddd; text-align: center; }
+.menu .menu-in .separetor { display: flex; justify-content: center; margin-bottom: 25px; transition: all .4s ease-in-out; }
+.menu .menu-in .add-tarefa { margin-bottom: 20px; }
+.menu .menu-in a:hover { color: #ccb962; }
+.show-add .menu .menu-in .add-tarefa { color: #cac3a5; }
+
+.nova-tarefa { 
+    max-width: 300px; 
+    height: 100%;
+    right: 80px; 
+    transform: translateX(100%); 
+    padding: 30px 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: #eee;
+    visibility: hidden;
+    z-index: 10;
+}
+.nova-tarefa .subtitle { margin-bottom: 20px;font-weight: 700; }
+.nova-tarefa label { color: #eee; }
+.nova-tarefa .form-group textarea.form-field { min-width: 200px; max-width: calc(300px - 30px); min-height: 150px; max-height: 300px; }
+body.show-add .nova-tarefa { visibility: visible; transform: translateX(0); }
+body.show-add .listagem,
+body.show-add .header-in { transform: translateX(-20%); filter: blur(1px); }
+body.show-add .listagem:before,
+body.show-add .header-in:before { 
+    width: 100%; 
+    height: 100%; 
+    content: "";
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    z-index: 10; 
+    background-color: rgba(250, 250, 250, 0.3); 
+}
+
+@media screen and (max-width: 991px) {
+    .col { flex: 0 0 50%; max-width: 50%; }
+}
+
+@media screen and (max-width: 768px) {
+    .session { width: 100%; overflow-y: auto; }
+    .session .row { padding-bottom: 100px; }
+    .title span { font-size: 20px; padding: 0 5px; }
+    .col { flex: 0 0 100%; max-width: 100%; }
+    .menu { width: 100%; height: 60px; top: auto; bottom: 0; }
+    .menu .menu-in { display: flex; justify-content: space-between; padding: 0 15px; }
+    .menu .menu-in a { font-size: 25px; margin: 10px auto; }
+    .menu .menu-in .separetor { display: none; }
+    .nova-tarefa { right: 0; background-color: rgba(20, 20, 20, 0.8); }
+}
