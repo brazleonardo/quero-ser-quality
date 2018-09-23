@@ -12,11 +12,14 @@ Arquivo de configuração encontra-se na raiz do diretório:
 
 **todo-list-api**
 
-Nome [here].env(.env).
+Nome do arquivo: .env
 
 Configurei o banco com as infromações abaixo:
 
 ```php
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
 DB_DATABASE=todo_list_quality
 DB_USERNAME=root
 DB_PASSWORD=''
@@ -39,7 +42,7 @@ Comando para rodar o servidor:
 ```cmd
 npm run bild
 ```
-Comando gerar o bundle.js para produção:
+Comando para gerar o bundle.js para produção:
 
 ```cmd
 npm run bild:prod
