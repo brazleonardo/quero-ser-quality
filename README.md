@@ -10,11 +10,11 @@ Api desenvolvida em Laravel + Mysql.
 
 Arquivo de configuração encontra-se na raiz do diretório:
 
-**todo-list-api**
-
-Nome do arquivo: .env
+**/todo-list-api**
 
 Configurei o banco com as infromações abaixo:
+
+Nome do arquivo que configura o banco: **.env**.
 
 ```php
 DB_CONNECTION=mysql
@@ -30,7 +30,7 @@ DB_PASSWORD=''
 
 Sobre o front-end.
 
-**todo-list-api**
+**/todo-list-api**
 
 comando para instalar as dependências:
 
