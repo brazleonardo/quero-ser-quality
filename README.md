@@ -6,6 +6,8 @@ Informações sobre o teste.
 
 Api desenvolvida em Laravel + Mysql.
 
+**URL API** http://localhost/quero-ser-quality/todo-list-api/public
+
 **Configurações do bando de dados**
 
 Arquivo de configuração encontra-se na raiz do diretório:
@@ -24,7 +26,7 @@ DB_DATABASE=todo_list_quality
 DB_USERNAME=root
 DB_PASSWORD=''
 ```
-**O backup do bando encontrase no diretório raiz**
+**O backup do bando encontra-se no diretório raiz**
 
 ## todo-list-app
 
