@@ -1,18 +1,46 @@
 # TO-DO List
 
-Esse teste consiste em criar uma lista de tarefas.  
-Os pré-requisitos são:
+Informações sobre o teste.
 
-- Permitir criar uma tarefa, em forma de um card, com um titulo e uma breve descrição.
-- Permitir excluír a tarefa.
-- Permitir marcar a tarefa como concluída.
-- Incluir um filtro de status de tarefa (concluídas e pendentes).
-  
-A aplicação deverá ser separa em frontend e uma API Restful.
-Para o frontend, pode-se usar qualquer framework open source, preferencialmente ReactJS.
+## todo-list-api 
 
-Para a API, utilize PHP 7, com algum framework de sua preferência.
+Api desenvolvida em Laravel + Mysql.
 
-Não há a necessidade de persistir as informações em um banco de dados relacional como o MySQL, mas se achar necessário, será considerado um ponto importante.
+**Configurações do bando de dados**
 
-Boa sorte.
+Arquivo de configuração encontra-se na raiz do diretório:
+
+**todo-list-api**
+
+Nome [here].env(.env).
+
+Configurei o banco com as infromações abaixo:
+
+```php
+DB_DATABASE=todo_list_quality
+DB_USERNAME=root
+DB_PASSWORD=''
+```
+**O backup do bando encontrase no diretório raiz**
+
+## todo-list-app
+
+Sobre o front-end.
+
+**todo-list-api**
+
+comando para instalar as dependências:
+
+```cmd
+npm install
+```
+Comando para rodar o servidor:
+
+```cmd
+npm run bild
+```
+Comando gerar o bundle.js para produção:
+
+```cmd
+npm run bild:prod
+```
