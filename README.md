@@ -30,6 +30,8 @@ DB_PASSWORD=''
 ```
 **O backup do bando encontra-se no diretório raiz**
 
+Nome do arquivo: **todo_list_quality.sql**
+
 ## todo-list-app
 
 Sobre o front-end.
@@ -41,13 +43,13 @@ Comando para instalar as dependências:
 ```cmd
 npm install
 ```
-Comando para rodar o servidor:
+Comando para startar o servidor:
 
 ```cmd
-npm run bild
+npm run build
 ```
 Comando para gerar o bundle.js para produção:
 
 ```cmd
-npm run bild:prod
+npm run build:prod
 ```

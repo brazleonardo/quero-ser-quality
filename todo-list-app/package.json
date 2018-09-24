@@ -4,8 +4,8 @@
   "description": "Teste Quality",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack-dev-server",
-    "build:prod": "webpack -p"
+    "build": "webpack-dev-server --mode development --open",
+    "build:prod": "webpack --mode production"
   },
   "author": "Braz Leonardo",
   "license": "MIT",

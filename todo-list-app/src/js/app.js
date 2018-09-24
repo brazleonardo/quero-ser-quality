@@ -110,7 +110,7 @@ const App = {
     },
 
     /*
-    * Função que adicona uma tarefa
+    * Função que adiciona uma tarefa
     * @method addNewTarefa
     */
     addNewTarefa: () => {
@@ -249,7 +249,7 @@ const App = {
 
             setTimeout(() => {
                 elementList.classList.remove('hide-session');
-                allList.forEach((list) =>{
+                allList.forEach((list) => {
                     list.classList.remove('hide');
                 });
                 
